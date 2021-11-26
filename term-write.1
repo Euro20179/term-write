@@ -1,0 +1,28 @@
+.TH TERM-WRITE 1 2021-11-25
+.SH NAME
+term-write \- program to execute commands on one terminal, from another
+.SH SYNOPSIS
+.B term-write
+.RI [ options... ]
+.I term-number
+.I command...
+.SH DESCRIPTION
+term-write will not write anything to stdout, instead it will simulate your typing on another terminal.
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+Help information
+.TP
+.BR \-e ", " \-\-escape
+whether or not to interperate escaped characters, eg: "\\n"
+.TP
+.BR \-n ", " \-\-new\-line
+whether or not to add a new line to the end
+(this will be equivilent to pressing enter)
+.SH EXIT STATUS
+.I 1
+: General error
+.SH FILES
+This program uses no files
+.PP
+This program needs access to terminals that are represented as files in /dev/pts
