@@ -24,6 +24,7 @@ argumentParser.add_argument("-n", "--new-line", action="store_const", const=Fals
 args = argumentParser.parse_args()
 
 fd = os.open(f"/dev/pts/{args.terminal[0]}", os.O_RDWR)
+
 cmd = " ".join(args.command)
 userId = os.getuid()
 if userId != 0: raiseError("PermissionError", "Must be run as root")
